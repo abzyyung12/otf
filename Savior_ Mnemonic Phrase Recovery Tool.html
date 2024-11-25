@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://3rditeration.github.io/mnemonic-recovery/src/index.html -->
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Seed Savior: Mnemonic Phrase Recovery Tool</title>
+        <link rel="stylesheet" href="./Savior_ Mnemonic Phrase Recovery Tool_files/bootstrap-3.3.7.css">
+        <link rel="stylesheet" href="./Savior_ Mnemonic Phrase Recovery Tool_files/app.css">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Seed Savior: Mnemonic Phrase Recovery Tool" name="description">
+        <meta content="Tal Be&#39;ery (KZen Networks)" name="author">
+    </head>
+    <body>
+        <div class="container">
+
+            <h1 class="text-center">Seed Savior: Mnemonic Phrase Recovery Tool</h1>
+            <p class="version">v0.1-iteration</p>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <!--h2>Mnemonic</h2-->
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-10">
+                                <p> This tool is meant to help users with recovring a slightly incorrect Bitcoin and Ethereum mnemonic phrase (AKA backup or seed). You can enter an existing BIP39 mnemonic and get derived adresses in various formats. If a word is wrong, the tool will try to suggest the closest option. If a word is missing or unknown, please type "?" instead and the tool will find all relevant options.
+								<br>
+								<br><b><i>If this was helpful, feel free to send me a tip:</i></b>
+								<br>BTC: 37hiiSB1Poj6Shs8WawPS2HjT2jzHkFSQi
+								<br>LTC: MRWnUcsyofisVp5GvX7nxMog5caneycKZ6
+								<br>ETH: 0x14b2E26021d0Ce8E2cE6a2Eb6E2690714bB18E17
+								<br>VTC: vtc1qxauv20r2ux2vttrjmm9eylshl508q04uju936n
+								<br>ZEN: znUihTHfwm5UJS1ywo911mdNEzd9WY9vBP7
+                                </p>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="form-group generate-container">
+                            <label class="col-sm-2 control-label"></label>
+                            <div class="col-sm-10">
+                                <div class="form-inline">
+                                    <div class="input-group-inline">
+                                         <span><p><b>Enter your mnemonic</b></p>
+                                             <b>example (see also the demo section below)</b>: enter a 12 or 24 words seed phrase: "<i>phrase brief ceiling dream rack install fault insane panic surround glory <b>?</b> library brother hill sauce access child notice picnic dinner panda purity poem</i>"
+											 <br>
+											 <br><i><b>Note: 12 word seed phrases will take significantly longer to process due to the large number of possibilities for a unknown word.</b></i><br>
+                                             <p>
+											 
+                                            
+                                             The tool will suggest several options for the missing word and the relevant one will be "asset", with the following Ethereum address, listed in the "BIP44 ETH Address" column "0x2dfF20b40504f99c6314ac30e8DF5c02dd8058e7"
+                                             </p>
+                                         </span>
+                                    
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phrase" class="col-sm-2 control-label">BIP39 Mnemonic</label>
+                            <div class="col-sm-10">
+                                <textarea id="phrase" placeholder="phrase brief ceiling dream rack install fault insane panic surround glory ? library brother hill sauce access child notice picnic dinner panda purity poem" class="phrase private-data form-control"></textarea>
+                            </div>
+                        </div>
+                        
+                        
+                        <table class="table table-striped">
+                            <thead>
+                                <tr><th>
+                                    <div class="input-group">
+                                        <span>Recovered Word</span>&nbsp;&nbsp;
+                                        
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="input-group">
+                                        <span>BIP44 BTC Address <br><i>(m/44'/0'/0'/0 Legacy Bitcoin Address)</i></span>&nbsp;&nbsp;
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="input-group">
+                                        <span>BIP49 BTC Address <br><i>(m/49'/0'/0'/0 Segwit Bitcoin Address)</i></span>&nbsp;&nbsp;
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="input-group">
+                                        <span>BIP84 BTC Address <br><i>(m/84'/0'/0'/0 Bech32 Bitcoin Address)</i></span>&nbsp;&nbsp;
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="input-group">
+                                        <span>BIP44 ETH Address <br><i>(m/44'/60'/0'/0 Ledger Live, Trezor, Jaxx, etc)</i></span>&nbsp;&nbsp;
+                                    </div>
+                                </th>
+								<th>
+                                    <div class="input-group">
+                                        <span>BIP32 ETH Address <br><i>(m/44'/60'/0' Legacy Ledger, Coinomi)</i></span>&nbsp;&nbsp;
+                                    </div>
+                                </th>
+								
+								<th>
+                                    <div class="input-group">
+                                        <span>XRP Address <br><i>(m/44'/144'/0'/0)</i></span>&nbsp;&nbsp;
+                                    </div>
+                                </th>
+								
+								<th>
+                                    <div class="input-group">
+                                        <span>LTC Address <br><i>(m/44'/2'/0'/0)</i></span>&nbsp;&nbsp;
+                                    </div>
+                                </th>
+								
+								<th>
+                                    <div class="input-group">
+                                        <span>ZEN Address <br><i>(m/44'/121'/0'/0)</i></span>&nbsp;&nbsp;
+                                    </div>
+                                </th>
+                                
+                            </tr></thead>
+                            <tbody class="addresses-recovery monospace">
+                           
+                            </tbody>
+                        </table>
+                        
+                        </form></div>
+                
+        
+                
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>License</h2>
+                    <p>
+                    <span>Please refer to <a href="https://github.com/3rdIteration/mnemonic-recovery/blob/master/LICENSE" target="_blank">the software license</a> for more detail.
+                    </span>
+                    </p>
+                    <p>The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.</p>
+                </div>
+            </div>
+            <hr>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Demo</h2>
+					I put together an example of how to use this too, as well as how to use it securely within TAILS that you can check out on YouTube.
+					<iframe width="560" height="315" src="./Savior_ Mnemonic Phrase Recovery Tool_files/Fp3pZsezlfU.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    <p>
+					Alternatively, the demo included in the original Seed Savior should give a pretty good impression of how this tool works.<br>
+                    In this demo we enter "<i>phrase brief ceiling dream rack install fault insane panic surround glory <b>?</b> library brother hill sauce access child notice picnic dinner panda purity poem</i>"
+                    </p>
+                    <p>
+                    
+                    The tool suggests several options for the missing word and the relevant one will be "asset". We can verify that by clicking on the link of the dervied Ethereum address ("0x2dfF20b40504f99c6314ac30e8DF5c02dd8058e7" listed in the "BIP44 ETH Address" column) and checking the address has transaction history.
+                    </p><figure>
+                        <img src="./Savior_ Mnemonic Phrase Recovery Tool_files/seed demo annotated.gif" alt="Demo" style="width:100%">
+                            
+                    </figure>
+                  
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Offline Usage</h2>
+
+                    <p>
+                    You can use this tool without having to be online.
+                    </p>
+                    <p>
+                    In your browser, select file save-as, and save this page
+                    as a file.
+                    </p>
+                    <p>
+                    Double-click that file to open it in a browser
+                    on any offline computer.
+                    </p>
+                    <p>
+                    <span>Alternatively, download the file from the repository</span>
+                    -
+                    <a href="https://github.com/3rdIteration/mnemonic-recovery/">https://github.com/3rdIteration/mnemonic-recovery/</a>
+                    </p>
+
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>This project is 100% open-source code</h2>
+
+                    <p>
+                        <span>Get the source code from the repository</span>
+                        -
+                        <a href="https://github.com/3rdIteration/mnemonic-recovery" target="_blank">
+                            https://github.com/3rdIteration/mnemonic-recovery
+                        </a>
+                    </p>
+                    
+                    <p>
+						<span>The project is based on Ian Coleman's Bip39 project. Get Bip39's source code from the repository</span>
+						-
+						<a href="https://github.com/iancoleman/bip39" target="_blank">
+							https://github.com/iancoleman/bip39
+						</a>
+					</p>
+					
+					<p>
+						<span>The tool is a minimally modifed version of the Seed Savior Tool found here:</span>
+						-
+						<a href="https://kzen-networks.github.io/mnemonic-recovery/" target="_blank">
+							https://kzen-networks.github.io/mnemonic-recovery/
+						</a>
+						<br>
+						<span><i>It's possible the changes I added will be merged into the main project, but I have forked it in the mean time while I add some interface tweaks to make it a bit more n00b friendly.</i></span>
+					</p>
+		  
+                    <h3>Libraries</h3>
+
+                    <p>
+                        <span>BitcoinJS - </span>
+                        <a href="https://github.com/bitcoinjs/bitcoinjs-lib" target="_blank">
+                            https://github.com/bitcoinjs/bitcoinjs-lib
+                        </a>
+                    </p>
+
+                    <p>
+                        <span>jsBIP39 - </span>
+                        <a href="https://github.com/iancoleman/jsbip39" target="_blank">
+                            https://github.com/iancoleman/jsbip39
+                        </a>
+                    </p>
+
+                    <p>
+                        <span>sjcl - </span>
+                        <a href="https://github.com/bitwiseshiftleft/sjcl" target="_blank">
+                            https://github.com/bitwiseshiftleft/sjcl
+                        </a>
+                    </p>
+
+                    <p>
+                        <span>jQuery - </span>
+                        <a href="https://jquery.com/" target="_blank">
+                            https://jquery.com/
+                        </a>
+                    </p>
+
+                    <p>
+                        <span>Twitter Bootstrap - </span>
+                        <a href="http://getbootstrap.com/" target="_blank">
+                            http://getbootstrap.com/
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="qr-container hidden">
+            <div class="qr-hint bg-primary hidden">Click field to hide QR</div>
+            <div class="qr-hint bg-primary">Click field to show QR</div>
+            <div class="qr-hider hidden">
+                <div class="qr-image"></div>
+                <div class="qr-warning bg-primary">Caution: Scanner may keep history</div>
+            </div>
+        </div>
+
+        <div class="feedback-container">
+            <div class="feedback" style="display: none;"></div>
+        </div>
+
+        <script type="text/template" id="address-row-template">
+            <tr>
+                <td class="index"><span></span></td>
+                <td class="address"><span data-show-qr></span></td>
+                <td class="pubkey"><span data-show-qr></span></td>
+                <td class="privkey private-data"><span data-show-qr></span></td>
+            </tr>
+        </script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/polyfill.es6.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/basex.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/unorm.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/jquery-3.2.1.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/bootstrap-3.3.7.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/levenshtein.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/kjua-0.1.1.min.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/bitcoinjs-3.3.2.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/bitcoinjs-extensions.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/bitcoinjs-bip38-2.0.2.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/segwit-parameters.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/ethereumjs-util.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/ripple-util.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/bchaddrjs-0.2.1.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/sjcl-bip39.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/wordlist_english.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/wordlist_japanese.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/wordlist_spanish.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/wordlist_chinese_simplified.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/wordlist_chinese_traditional.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/wordlist_french.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/wordlist_italian.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/wordlist_korean.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/jsbip39.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/biginteger.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/zxcvbn.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/entropy.js.download"></script>
+        <script src="./Savior_ Mnemonic Phrase Recovery Tool_files/index.js.download"></script>
+    
+
+</div></body></html>
